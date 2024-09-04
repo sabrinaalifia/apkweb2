@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="form-section">
+            <h1><u>Bookshelf</u></h1>
+            <form id="book-form">
+                <input type="text" id="title" placeholder="judul buku" required>
+                <input type="text" id="author" placeholder="penulis" required>
+                <input type="number" id="year" placeholder="tahun" required>
+                <button type="submit">tambah buku</button>
+            </form>
+        </div>
+        <div id="bookshelf-section">
+            <input type="text" id="search" placeholder="cari judul buku">
+            <div class="bookshelf-section">
+                <h2>Belum Selesai Dibaca</h2>
+                <div id="incomplete-bookshelf"></div>
+                <p id="incomplete-no-books" class="no-books" style="display: none;">Buku tidak ditemukan</p>
+            </div>
+            <div class="bookshelf-section">
+                <h2>Selesai Dibaca</h2>
+                <div id="complete-bookshelf"></div>
+                <p id="complete-no-books" class="no-books" style="display: none;">Buku tidak ditemukan</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <h2>edit buku</h2>
+            <input type="text" id="edit-title" placeholder="judul buku" required>
+            <input type="text" id="edit-author" placeholder="penulis" required>
+            <input type="number" id="edit-year" placeholder="tahun" required>
+            <button id="save-button">simpan perubahan</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
